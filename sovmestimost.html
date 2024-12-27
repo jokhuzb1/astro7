@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="sovmestimost.css" />
+  </head>
+  <body class="bg-black text-white">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <img src="/assets/logo.png" alt="Logo" />
+      </div>
+      <button id="menu-toggle" class="menu-toggle">&#9776;</button>
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Рассчитать совместимость</a></li>
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Стоимость</a></li>
+      </ul>
+    </nav>
+
+    <ul id="mobile-menu" class="mobile-menu">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">Рассчитать совместимость</a></li>
+      <li><a href="#">О нас</a></li>
+      <li><a href="#">Стоимость</a></li>
+    </ul>
+
+    <main class="main">
+      <section class="head">
+        <div class="img-container">
+          <div class="head-texts">
+            <h1>
+              Рассчитайте совместимость по дате рождения Онлайн расчёт судьбы
+              вашей пары
+            </h1>
+            <h2>
+              Совместимость по числу судьбы человека ОНЛАЙН. Любит или нет
+            </h2>
+            <h3>
+              Рассчитайте судьбу вашей пары. Проверить мужчину и женщину по
+              гороскопу. Консультация эксперта
+            </h3>
+          </div>
+          <div class="date-selector">
+            <i class="fa fa-venus icon" aria-hidden="true"></i>
+            <select class="day" name="day">
+              <option value="">Day</option>
+            </select>
+
+            <select class="month" name="month">
+              <option value="">Month</option>
+            </select>
+
+            <select class="year" name="year">
+              <option value="">Year</option>
+            </select>
+          </div>
+
+          <div class="date-selector">
+            <i class="fa fa-mars icon" aria-hidden="true"></i>
+
+            <select class="day" name="day">
+              <option value="">Day</option>
+            </select>
+
+            <select class="month" name="month">
+              <option value="">Month</option>
+            </select>
+
+            <select class="year" name="year">
+              <option value="">Year</option>
+            </select>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Support</a>
+      </div>
+      <p>&copy; 2024 MySite. All rights reserved.</p>
+    </footer>
+
+    <script src="sovmestimost.js"></script>
+  </body>
+</html>
