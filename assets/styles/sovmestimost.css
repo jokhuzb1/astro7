@@ -636,7 +636,7 @@ select {
 }
 .plans {
   background: linear-gradient(rgba(253, 36, 36, 0.418), rgba(27, 24, 22, 0.411)),
-    url("../images/bg-linear.png") no-repeat center center;
+    url("../bg-linear.png") no-repeat center center;
   background-size: cover;
   background-attachment: fixed; /* Use background-attachment instead of background-position */
   width: 100%;
