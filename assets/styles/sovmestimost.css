@@ -2,6 +2,9 @@
   font-family: "Tenor Sans";
   src: url("../../fonts/TenorSans-Regular.ttf") format("truetype");
 }
+html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
@@ -86,7 +89,6 @@ p {
   align-items: center;
   position: fixed;
   width: 100%;
-
   background: rgba(73, 72, 72, 0.2);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
@@ -123,7 +125,7 @@ nav li {
 }
 
 .nav-item {
-  margin-left: 5rem;
+  margin-left: 3rem;
 }
 
 .nav-link {

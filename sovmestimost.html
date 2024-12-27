@@ -15,18 +15,21 @@
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
   </head>
-  <body class="bg-black text-white">
+  <body class="bg-black text-white" id="/">
     <nav class="navbar">
       <img src="assets/logo.png"  alt="Astro7.su logo"/>
       <ul class="nav-menu">
           <li class="nav-item">
+              <a href="#home" class="nav-link">Главная</a>
+          </li>
+          <li class="nav-item">
               <a href="https://astro7.su" class="nav-link">Рассчитайть совместимость</a>
           </li>
           <li class="nav-item">
-              <a href="#about" class="nav-link">О нас</a>
+              <a href="#aboutus" class="nav-link">О нас</a>
           </li>
           <li class="nav-item">
-              <a href="#reviews" class="nav-link">Отзывы</a>
+              <a href="#plans" class="nav-link">Тарифы</a>
           </li>
           <li class="nav-item">
               <a href="#faq" class="nav-link">FAQ</a>
@@ -38,7 +41,7 @@
           <span class="bar"></span>
       </div>
   </nav>
-    <main class="main">
+    <main class="main" id="home">
       <section class="head">
         <div class="img-container">
           <div class="head-texts">
@@ -233,7 +236,7 @@
           </div>
         </div>
       </section>
-      <section class="third">
+      <section class="third" id="aboutus">
         <div class="container">
 
           <h2>О проекте
@@ -289,7 +292,7 @@
       </div>
 
     </section>
-      <section class="plans">
+      <section class="plans" id="plans">
         <div class="container">
           <p>Сколько стоит
           </p>
