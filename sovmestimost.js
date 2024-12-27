@@ -1,11 +1,23 @@
-const menuToggle = document.getElementById("menu-toggle");
-const mobileMenu = document.getElementById("mobile-menu");
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
 
-menuToggle.addEventListener("click", () => {
-  mobileMenu.classList.toggle("active");
-});
-// Populate day, month, and year options dynamically for all sets
-// Populate day, month, and year options dynamically for all sets
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+}
+
+// when we click on hamburger icon its close
+
+const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
+}
 window.onload = function () {
   const daySelects = document.querySelectorAll(".day");
   const monthSelects = document.querySelectorAll(".month");
