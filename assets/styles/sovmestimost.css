@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Tenor Sans";
-  src: url("../fonts/TenorSans-Regular.ttf") format("truetype");
+  src: url("../../fonts/TenorSans-Regular.ttf") format("truetype");
 }
 * {
   margin: 0;
@@ -11,6 +11,7 @@
 .container {
   max-width: 1028px;
   margin: auto;
+  overflow-x: scroll;
 }
 
 body {
@@ -21,7 +22,6 @@ body {
   background-size: cover;
   background-position: fixed;
   background-repeat: no-repeat;
-
   color: white;
 }
 .img-container {
@@ -35,7 +35,7 @@ body {
   margin: 0;
 }
 .head-texts {
-  max-width: 70%;
+  width: 70%;
   text-align: start;
 }
 
@@ -66,6 +66,9 @@ h4 {
   line-height: 1.4;
   margin-bottom: 0.625em;
 }
+h5 {
+  font-size: 1.2em;
+}
 
 p {
   font-size: 1.125em;
@@ -79,9 +82,8 @@ p {
   align-items: center;
   padding: 15px 20px;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   background: rgba(10, 10, 10, 0.15);
-
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.6px);
   -webkit-backdrop-filter: blur(3.6px);
@@ -124,7 +126,6 @@ p {
 .mobile-menu {
   display: none;
   list-style: none;
-  margin: 0;
   padding: 20px;
   background-color: black;
 }
@@ -146,24 +147,37 @@ p {
 .footer {
   background-color: black;
   text-align: center;
-  padding: 20px;
+  color: #ffff;
+  padding: 40px;
 }
-
-.footer-links {
+.footer ul {
+  list-style: none;
+}
+.footer-container {
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
 }
-
-.footer-links a {
+.footer a {
   margin: 0 15px;
   text-decoration: none;
   color: white;
   transition: color 0.3s;
 }
-
-.footer-links a:hover {
+.text {
+  width: 70%;
+  margin: 5rem auto;
+  text-align: center;
+}
+.footer a:hover {
   color: yellow;
+}
+
+.footer-copyright p {
+  margin: auto;
+  text-align: center;
+  font-size: 14px;
+  margin: 20px;
 }
 .section3 {
   padding: 50px 0;
@@ -183,7 +197,7 @@ p {
 }
 
 .card-long img {
-  max-width: 40%;
+  width: 40%;
   margin-top: 20px;
 }
 .card-long h2,
@@ -212,18 +226,90 @@ p {
   .nav-menu {
     display: none;
   }
+  h1 {
+    font-size: 26px;
+    width: 100%;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  h3 {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  h4 {
+    font-size: 16px;
+  }
+  .card-img {
+    width: 100% !important;
+    height: auto;
+    margin: auto;
+  }
+  .img-container {
+    padding-right: 20px;
+    padding-left: 20px;
+    width: 100vw;
+  }
+  .head-texts {
+    width: 95vw;
+    text-align: start;
+  }
+  .flexbox {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .text-area {
+    margin: 0;
+  }
+  .text-area p {
+    margin: 10px;
+    text-align: start;
+  }
+  .card-long img {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .card-img {
+    width: 100%;
+    object-fit: contain;
+  }
+  .text {
+    width: 100%;
+    margin: 0;
+  }
+  .linear-img {
+    width: 100%;
+  }
 
+  .date-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .menu-toggle {
     display: block;
   }
-
   .mobile-menu {
     display: none;
     flex-direction: column;
   }
 
   .mobile-menu.active {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
     display: flex;
+    padding-top: 100px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 .date-selector {
@@ -256,13 +342,7 @@ select {
   text-decoration: none;
   cursor: pointer;
 }
-.text {
-  max-width: 70%;
-  margin: 5rem auto;
-}
-.text {
-  text-align: center;
-}
+
 .second {
   background: linear-gradient(rgba(0, 0, 0, 0.842), rgba(214, 1, 1, 0.575)),
     url("../../assets/nuymerologybg.png") no-repeat center center;
@@ -505,7 +585,10 @@ select {
     padding: 12px;
   }
 }
-
+.plans {
+  background: url("/assets/images/bg-linear.png");
+  color: #fff;
+}
 .plan-card-container {
   display: flex;
   flex-wrap: no-wrap;
@@ -569,13 +652,17 @@ select {
   .card {
     width: 100%; /* Cards will stack vertically */
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
-
+  .plan-card-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
   .card-img {
     width: 120px;
     height: 120px;
     margin-right: 0;
+    margin-left: 0;
     margin-bottom: 15px;
   }
 
