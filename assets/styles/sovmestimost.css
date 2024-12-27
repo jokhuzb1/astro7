@@ -9,6 +9,14 @@
   font-family: "Tenor Sans", Arial, sans-serif;
 }
 .container {
+  overflow-x: hidden; /* Disables horizontal scrolling */
+  scrollbar-width: none; /* For Firefox (hides scrollbar visually) */
+}
+
+.container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
+}
+.container {
   max-width: 1028px;
   margin: auto;
   overflow-x: scroll;
@@ -31,7 +39,7 @@ body {
   background-attachment: fixed; /* Use background-attachment instead of background-position */
   width: 100%;
   height: 100%;
-  padding: 150px 20px 20px 50px;
+  padding: 150px 120px 120px 150px;
   margin: 0;
 }
 .head-texts {
@@ -80,7 +88,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 20px;
+  padding: 15px 120px;
   position: fixed;
   width: 100vw;
   background: rgba(10, 10, 10, 0.15);
@@ -246,6 +254,7 @@ p {
     margin: auto;
   }
   .img-container {
+    padding-top: 100px;
     padding-right: 20px;
     padding-left: 20px;
     width: 100vw;
@@ -433,6 +442,7 @@ select {
 /* Reviews container with horizontal scroll */
 .reviews-container {
   display: flex;
+  justify-content: center;
   overflow-x: scroll;
   gap: 20px;
   padding: 20px;
@@ -673,4 +683,80 @@ select {
   .card-content p {
     font-size: 0.9rem;
   }
+}
+/* Scroll to Top Button Styling */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #ff5e57; /* Button color */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  z-index: 1000;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: #ff3e37; /* Hover color */
+}
+
+.fade-in {
+  opacity: 0; /* Start as invisible */
+  transition: opacity 0.5s ease-in;
+  will-change: opacity, transform; /* Hint to the browser to optimize */
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%); /* Start off the left */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* End at the normal position */
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%); /* Start off the right */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* End at the normal position */
+  }
+}
+
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(100%); /* Start off the bottom */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End at the normal position */
+  }
+}
+
+/* Active class for when the element enters the viewport */
+.fade-in-left {
+  animation: fadeInLeft 1s ease-out forwards;
+}
+
+.fade-in-right {
+  animation: fadeInRight 1s ease-out forwards;
+}
+
+.fade-in-bottom {
+  animation: fadeInBottom 0.7s ease-out forwards;
 }

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="assets/styles/sovmestimost.css" />
   </head>
   <body class="bg-black text-white">
-    <!-- Navbar -->
+ 
     <nav class="navbar">
       <div class="logo">
         <img src="/assets/logo.png" alt="Logo" />
@@ -107,7 +107,8 @@
             <img
               src="assets/numerology.png"
               alt="numerology img"
-              class="card-img"
+              class="card-img fade-in"
+              data-animation="left"
             />
             <div class="card-content">
               <h3>Нумерология</h3>
@@ -140,11 +141,11 @@
                 поэтому наш расклад или расчет полностью индивидуальный.
               </p>
             </div>
-            <img src="assets/astrology.png" alt="astro7 img" class="card-img" />
+            <img src="assets/astrology.png" alt="astro7 img" class="card-img fade-in" data-animation="right" />
           </div>
 
           <div class="card">
-            <img src="assets/taro.png" alt="numerology img" class="card-img" />
+            <img src="assets/taro.png" alt="numerology img" class="card-img fade-in" data-animation="left"/>
             <div class="card-content">
               <h3>Таро</h3>
               <p>
@@ -166,7 +167,7 @@
             </h2>
             <div class="flexbox">
               <div class="card-2">
-                <img src="assets/tar2.png" alt="Image 1" class="card-img" />
+                <img src="assets/tar2.png" alt="Image 1" class="card-img fade-in"data-animation="left" />
                 <div class="card-content">
                   <h3>Астролог</h3>
                   <p>
@@ -178,7 +179,7 @@
                 </div>
             </div>
               <div class="card-2">
-                <img src="assets/ast2.png" alt="Image 1" class="card-img" />
+                <img src="assets/ast2.png" alt="Image 1" class="card-img fade-in" data-animation="right" />
                 <div class="card-content">
                   <h3>Таролог</h3>
                   <p>
@@ -191,7 +192,7 @@
             </div>
             </div>
           <div class="card card-long">
-            <img src="./assets/num3.png" alt="numerolog img">
+            <img src="./assets/num3.png" alt="numerolog img" class="fade-in" data-animation="bottom">
             <div>
               <h2>
                 Нумеролог
@@ -288,14 +289,14 @@
           <h2> Консультация со специалистом по
             вашему вопросу — Бесплатно</h2>
           <div class="plan-card-container">
-        <div class="plan-card plan-card-red">
+        <div class="plan-card plan-card-red fade-in" data-animation="bottom" style="animation-delay: .5s;">
           <h3>Консультация со специалистом по вашему вопросу - Бесплатно</h3>
           <h1>Бесплатно</h1>
           <p>Сделайте первый шаг к изменению своей жизни уже сейчас. Астрологическая карта, карты Таро или числовой анализ ждут вас. Откройте новые возможности с бесплатной консультацией!</p>
           <button>ВЫБРАТЬ</button>
         </div>
       
-        <div class="plan-card">
+        <div class="plan-card fade-in" data-animation="bottom" style="animation-delay: 1s;">
           <h3>Персональный расклад таро на вашу ситуацию</h3>
           <h1>1 100 р от Виолетты</h1>
           <p>Этот расклад поможет вам разобраться в ваших взаимоотношениях с партнером, расскажет о чувствах, планах и желаниях.</p>
@@ -303,7 +304,7 @@
           <button>ВЫБРАТЬ</button>
         </div>
       
-        <div class="plan-card">
+        <div class="plan-card fade-in" data-animation="bottom" style="animation-delay: 1.5s;">
           <h3>Персональный гороскоп совместимости с консультацией от Офелии Райн</h3>
           <h1>3 750р ведем на</h1>
           <p>Хотите узнать совместимость с новым партнером?</p>
@@ -316,6 +317,7 @@
          
         
       </section>
+      <button id="scrollToTopBtn" class="scroll-to-top">↑</button>
     </main>
 
     <footer class="footer">

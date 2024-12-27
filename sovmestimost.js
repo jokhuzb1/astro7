@@ -140,3 +140,54 @@ accordionHeaders.forEach((header) => {
     }
   });
 });
+// Get the button
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// Show the button when the user scrolls down
+window.onscroll = function () {
+  if (
+    document.body.scrollTop > 200 ||
+    document.documentElement.scrollTop > 200
+  ) {
+    scrollToTopBtn.style.display = "flex";
+  } else {
+    scrollToTopBtn.style.display = "none";
+  }
+};
+
+// Scroll to the top when the button is clicked
+scrollToTopBtn.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // Smooth scrolling
+  });
+});
+
+const fadeInElements = document.querySelectorAll(".fade-in");
+
+const observer = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      // If the element is in the viewport, add the respective fade-in class
+      if (entry.isIntersecting) {
+        // Add the animation class depending on the data attribute
+        const animationType = entry.target.getAttribute("data-animation");
+        if (animationType === "left") {
+          entry.target.classList.add("fade-in-left");
+        } else if (animationType === "right") {
+          entry.target.classList.add("fade-in-right");
+        } else if (animationType === "bottom") {
+          entry.target.classList.add("fade-in-bottom");
+        }
+
+        observer.unobserve(entry.target); // Stop observing after the animation is triggered
+      }
+    });
+  },
+  { threshold: 0.5 }
+); // Trigger when 50% of the element is in the viewport
+
+// Observe all fade-in elements
+fadeInElements.forEach((element) => {
+  observer.observe(element);
+});
