@@ -463,6 +463,7 @@ select {
 .third {
   padding-top: 50px;
   text-align: center;
+  width: 100%;
   background: rgb(105, 18, 2);
   background: linear-gradient(
     180deg,
@@ -487,7 +488,9 @@ select {
 .reviews-container {
   display: flex;
   justify-content: center;
-  overflow-x: scroll;
+  overflow-x: auto;
+  max-width: 100%;
+  background-color: red;
   gap: 20px;
   padding: 20px;
   scroll-behavior: smooth; /* Smooth scroll */
