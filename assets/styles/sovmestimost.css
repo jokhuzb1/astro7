@@ -297,6 +297,11 @@ p {
     padding-right: 20px;
     padding-left: 20px;
     width: 100vw;
+    background: linear-gradient(
+        rgba(253, 36, 36, 0.418),
+        rgba(27, 24, 22, 0.411)
+      ),
+      url("../../assets/headbg.png") no-repeat center center;
   }
   .head-texts {
     width: 95vw;
