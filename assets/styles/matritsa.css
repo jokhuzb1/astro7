@@ -58,3 +58,43 @@ select:hover {
   background: rgba(0, 0, 0, 0);
   backdrop-filter: blur(8px); /* Apply blur effect */
 }
+@media only screen and (max-width: 768px) {
+  .head-texts h1 {
+    font-size: 2.4em;
+    font-weight: 800;
+    margin-bottom: 32px;
+  }
+  .head-texts h2 {
+    font-size: 1.6em;
+    font-weight: 600;
+    margin-bottom: 32px;
+  }
+  .head-texts h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 32px;
+  }
+  .head-texts {
+    margin: auto;
+  }
+  .head {
+    height: 100vh;
+  }
+  .img-container {
+    background: linear-gradient(
+        to right,
+        black,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5),
+        black
+      ),
+      url(../../assets/matritsa/head.webp) no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    padding: 128px 16px 16px 16px;
+    text-align: center;
+    margin: 0;
+  }
+}
