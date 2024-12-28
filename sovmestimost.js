@@ -136,19 +136,22 @@ const accordionHeaders = document.querySelectorAll(".accordion-header");
 accordionHeaders.forEach((header) => {
   header.addEventListener("click", () => {
     const content = header.nextElementSibling; // Get the corresponding content div
-
+    const icon = header.querySelector(".accordion-icon");
     // Toggle the display of the content
     if (content.style.display === "block") {
       content.style.display = "none";
+      icon.textContent = "+";
     } else {
       // Hide all other content sections
       const allContents = document.querySelectorAll(".accordion-content");
       allContents.forEach((item) => {
         item.style.display = "none";
+        icon.textContent = "+";
       });
 
       // Show the clicked content
       content.style.display = "block";
+      icon.textContent = "–";
     }
   });
 });
