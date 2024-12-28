@@ -1,5 +1,5 @@
 body {
-  background-color: #1b1b1b;
+  background-color: #0e0e0e;
 }
 
 .img-container {
@@ -58,6 +58,40 @@ select:hover {
   background: rgba(0, 0, 0, 0);
   backdrop-filter: blur(8px); /* Apply blur effect */
 }
+.first-section {
+  background: linear-gradient(
+      to bottom,
+      black,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.3),
+      black
+    ),
+    url("../../assets/matritsa/section1.webp") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  padding: 48px;
+}
+.block {
+  margin: auto;
+  padding: 48px 16px 16px 48px;
+  text-align: center;
+  gap: 24px;
+}
+.block-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 32px auto;
+}
+.block-items span {
+  border-left: 1px solid #ffff;
+  margin: 8px;
+  padding: 8px;
+  margin-left: 16px;
+  margin-top: 64px;
+}
+
 @media only screen and (max-width: 768px) {
   .head-texts h1 {
     font-size: 2.4em;
@@ -78,7 +112,7 @@ select:hover {
     margin: auto;
   }
   .head {
-    height: 100vh;
+    height: 90vh;
   }
   .img-container {
     background: linear-gradient(
@@ -97,4 +131,277 @@ select:hover {
     text-align: center;
     margin: 0;
   }
+  .block,
+  .first-section {
+    padding: 16px;
+  }
+  .block-items {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 8px auto;
+  }
+  .block-items span {
+    border-left: 1px solid #ffff;
+    margin: 8px;
+    padding: 8px;
+    margin-left: 8px;
+  }
+}
+
+/* Section2styles */
+
+/* General Styles */
+.section2-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.text-area {
+  flex: 1;
+  padding: 20px;
+}
+
+.text-area h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.text-area p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.green-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #4caf50;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.green-btn:hover {
+  background: #45a049;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.simple-card-container {
+  display: flex;
+  padding: 48px;
+  gap: 16px;
+}
+.simple-card {
+  display: flex;
+  padding: 16px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+.simple-container h2 {
+  text-align: center;
+}
+.custom {
+  align-self: flex-end;
+}
+.review-card {
+  background-color: #3b3b3b;
+  border: none;
+  margin-bottom: 48px;
+}
+
+.reviewer-name,
+.review-text {
+  color: #f3f1f1;
+}
+.poproybuyte-besplatnuyu-konsultatsiyu {
+  background: linear-gradient(
+      to right,
+      black,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5),
+      black
+    ),
+    url(../../assets/matritsa/section4.webp) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 5%;
+}
+
+@media (max-width: 768px) {
+  .section2-card,
+  .simple-card-container {
+    flex-direction: column;
+  }
+
+  .text-area {
+    text-align: center;
+  }
+
+  .image-container {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-area h2 {
+    font-size: 20px;
+  }
+
+  .text-area p {
+    font-size: 14px;
+  }
+
+  .green-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* PLANS SECTION */
+.plans {
+  background: #0e0e0e;
+  width: 100%;
+  height: 100%;
+  padding: 48px 10px;
+
+  color: #ffff;
+  text-align: center;
+}
+.plan-card-container {
+  display: flex;
+  flex-wrap: no-wrap;
+  align-items: start;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.plan-card-red > h3,
+p,
+h1 {
+  color: #0e0e0e;
+}
+.plan-card-red > button {
+  background-color: #0e0e0e !important;
+  color: white !important;
+}
+.plan-card {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  background-color: black;
+  color: rgb(255, 254, 254) !important;
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.plan-card-red {
+  background-color: rgb(21, 163, 2);
+  border: none;
+  border-radius: 4px;
+}
+
+.plan-card h3 {
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+}
+
+.plan-card h1 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.plan-card p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+.plan-card > h3,
+h1,
+p {
+  color: white;
+}
+
+.plan-card button {
+  margin-top: 20px;
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.plan-card button:hover {
+  background-color: #f0f0f0;
+}
+.faq {
+  background-color: black;
+  color: #ffff;
+  padding-top: 48px;
+}
+.accordion {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 96px 0;
+}
+.link {
+  text-align: center;
+  align-items: center;
+  color: #ffff;
+}
+.accordion-item {
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #000000;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Accordion header */
+.accordion-header {
+  width: 100%;
+  padding: 15px;
+  background-color: #3b3b3b;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f8f8f8;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease;
 }
