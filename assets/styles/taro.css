@@ -1,0 +1,305 @@
+body {
+  background-color: rgba(0, 0, 0, 1);
+  font-family: "Urbanist", serif !important;
+  font-optical-sizing: auto;
+}
+
+main {
+  padding: 5rem 1rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+
+.container {
+  overflow-x: hidden; /* Disables horizontal scrolling */
+  scrollbar-width: none; /* For Firefox (hides scrollbar visually) */
+}
+
+.container::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
+}
+.container {
+  max-width: 1028px;
+  width: 100%;
+  margin: auto;
+  overflow-x: scroll;
+}
+
+.reviews-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+  margin: 20px;
+}
+
+.reviews-container {
+  display: flex;
+  justify-content: start;
+  overflow-x: auto;
+  max-width: 100%;
+  gap: 20px;
+  padding: 20px;
+  scroll-behavior: smooth; /* Smooth scroll */
+}
+
+.accordion-item {
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 15px;
+  background-color: #3b3b3b;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f8f8f8;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+.reviewer-age {
+  color: black;
+}
+/* Change background on hover */
+.accordion-header:hover {
+  background-color: #e0e0e0;
+  color: #3b3b3b;
+}
+
+.accordion-content {
+  display: none;
+  padding: 15px;
+  background-color: #3b3b3b;
+  font-size: 1rem;
+  color: #ffff;
+  line-height: 1.6;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .accordion-header {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .accordion-content {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+}
+
+.review-card {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  width: 330px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.reviewer-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.reviewer-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviewer-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.reviewer-rating {
+  display: flex;
+  gap: 2px;
+}
+
+.star {
+  color: #ffd700; /* Gold color for stars */
+  font-size: 16px;
+}
+
+/* Review text */
+.review-text {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+.faq {
+  background-color: black;
+  color: #ffff;
+}
+
+.head {
+  background-image: url("/assets/taro/header.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .head {
+    background-size: cover;
+  }
+}
+
+.head-sub {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.head-sub h1 {
+  max-width: 550px;
+  width: 100%;
+}
+
+.head-sub h1 span,
+.head-sub > span {
+  color: rgba(0, 255, 64, 1);
+}
+.head-sub a {
+  border: 1px solid rgba(173, 173, 173, 1);
+  border-radius: 24px;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+
+.second {
+  background-image: url("/assets/taro/planets.webp");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  min-height: 800px;
+  margin-bottom: 60px;
+}
+.second-sub {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.second-sub span {
+  color: rgba(0, 255, 64, 1);
+}
+
+.second-sub p {
+  max-width: 400px;
+}
+
+.after-second {
+  margin-bottom: 60px;
+}
+.after-second h3 span {
+  color: rgba(0, 255, 64, 1);
+}
+
+.after-second .sub {
+  max-width: 650px;
+}
+
+.after-second-sub {
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media screen and (max-width: 768px) {
+  .after-second-sub {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media screen and (max-width: 530px) {
+  .after-second-sub {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.grid-container-sub {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 24px 16.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(173, 173, 173, 1);
+  width: 100%;
+}
+
+.grid-container-sub > div {
+  max-width: 200px;
+  width: 100%;
+}
+
+.grid-container-sub img {
+  width: 100%;
+}
+.grid-container-sub > a {
+  border: 1px solid rgba(173, 173, 173, 1);
+  border-radius: 24px;
+  padding: 12px 24px;
+  text-decoration: none;
+}
+
+.grid-container-sub h4 {
+  text-transform: uppercase;
+}
+.grid-container-sub p,
+.grid-container-sub h4 {
+  text-align: center;
+}
