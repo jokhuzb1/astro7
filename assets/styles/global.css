@@ -265,6 +265,7 @@ select {
   text-decoration: none;
   cursor: pointer;
 }
+
 .reviews-container {
   display: flex;
   justify-content: start;
@@ -410,6 +411,7 @@ select {
     text-align: center;
   }
 }
+
 .text {
   width: 70%;
   margin: 5rem auto;

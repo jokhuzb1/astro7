@@ -73,31 +73,31 @@ const reviewsData = [
     name: "Алексей Стрельцов",
     age: "57 лет",
     text: "Хочу поблагодарить чудесную Алёну Стрельцову, за прекрасную атмосферу созданную ею во время работы. За знания, отношение…",
-    imgSrc: "assets/imgplaceholder.png",
+    imgSrc: "/assets/imgplaceholder.webp",
   },
   {
     name: "Сергей Владимирович",
     age: "41 лет",
     text: "Сергей Владимирович, сильнейший экстрасенс и ясновидящий мира. Уникальный человек, просто бриллиант Сервиса Астро7.",
-    imgSrc: "assets/imgplaceholder.png",
+    imgSrc: "/assets/imgplaceholder.webp",
   },
   {
     name: "Арина",
     age: "41 лет",
     text: "Лаура — прекрасный эксперт. Увидела всю ситуацию в настоящем и обозначила перспективы на будущее. Благодарю!",
-    imgSrc: "assets/imgplaceholder.png",
+    imgSrc: "/assets/imgplaceholder.webp",
   },
   {
     name: "Аня",
     age: "56 лет",
     text: "Эльвире Максвелл, спасибо большое! Настолько проникновенно работает, можно сказать возвращает состояние души после всего…",
-    imgSrc: "assets/imgplaceholder.png",
+    imgSrc: "/assets/imgplaceholder.webp",
   },
   {
     name: "Ольга",
     age: "52 лет",
     text: "Ольга, эксперт в своем деле, помогла мне увидеть многие важные моменты, которые я не замечала ранее.",
-    imgSrc: "assets/imgplaceholder.png",
+    imgSrc: "/assets/imgplaceholder.webp",
   },
 ];
 
