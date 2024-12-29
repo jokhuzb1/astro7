@@ -401,7 +401,10 @@ p {
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
+.accordion-content {
+  display: none; /* Hidden by default */
+  padding: 16px;
+}
 /* Accordion header */
 .accordion-header {
   width: 100%;

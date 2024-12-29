@@ -206,3 +206,13 @@ const observer = new IntersectionObserver(
 fadeInElements.forEach((element) => {
   observer.observe(element);
 });
+window.addEventListener("load", () => {
+  const spinner = document.getElementById("spinner");
+  const content = document.getElementById("content");
+
+  // Hide spinner
+  spinner.style.display = "none";
+
+  // Show content
+  content.style.display = "block";
+});
