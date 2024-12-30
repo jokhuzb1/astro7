@@ -187,6 +187,10 @@ main {
   .head {
     background-size: cover;
   }
+  .plan-card-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .head-sub {
@@ -240,8 +244,17 @@ main {
   max-width: 400px;
 }
 
-.after-second {
+.second-head {
+  margin-top: 60px;
   margin-bottom: 60px;
+  padding: 180px;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
+    url("/assets/taro/rassklad.webp") no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+}
+.second-head h3 {
+  font-size: 2.5em;
 }
 .after-second h3 span {
   color: rgba(0, 255, 64, 1);
@@ -261,6 +274,12 @@ main {
 @media screen and (max-width: 768px) {
   .after-second-sub {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .second-head {
+    padding: 10px;
+  }
+  .second-head h3 {
+    font-size: 1.8em;
   }
 }
 @media screen and (max-width: 530px) {
@@ -302,4 +321,113 @@ main {
 .grid-container-sub p,
 .grid-container-sub h4 {
   text-align: center;
+}
+.icon {
+  font-size: 130px;
+  margin-bottom: 20px;
+}
+.icon-wrapper {
+  text-align: center;
+}
+.poproybuyte-besplatnuyu-konsultatsiyu {
+  margin: 48px auto;
+  background-color: #ddc7bb;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px 5%;
+}
+
+/* PLANS CARD */
+.plans {
+  background: #0e0e0e;
+  width: 100%;
+  height: 100%;
+  margin: 48px 0;
+  padding: 48px 10px;
+
+  color: #ffff;
+  text-align: center;
+}
+.plan-card-container {
+  display: flex;
+  flex-wrap: no-wrap;
+  align-items: start;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.plan-card-red > h3,
+p,
+h1 {
+  color: #0e0e0e;
+}
+.plan-card-red > button {
+  background-color: #0e0e0e !important;
+  color: white !important;
+}
+.plan-card {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  background-color: black;
+  color: rgb(255, 254, 254) !important;
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.plan-card-red {
+  background-color: rgb(21, 163, 2);
+  border: none;
+  border-radius: 4px;
+}
+
+.plan-card h3 {
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+}
+
+.plan-card h1 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.plan-card p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+.plan-card > h3,
+h1,
+p {
+  color: white;
+}
+
+.plan-card button {
+  margin-top: 20px;
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.plan-card button:hover {
+  background-color: #f0f0f0;
+}
+.ad-card {
+  display: flex;
+  background-color: #ddc7bb;
+  margin: 96px 0;
+  padding: 96px 48px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
