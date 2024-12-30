@@ -190,7 +190,20 @@ main {
 
 @media screen and (max-width: 768px) {
   .head {
+    background: linear-gradient(
+        to top,
+        black,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.8),
+        black
+      ),
+      url(../../assets/horoscope/bg-head.webp) no-repeat center center;
     background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .plan-card-container {
     display: flex;
