@@ -94,17 +94,22 @@ select:hover {
 
 @media only screen and (max-width: 768px) {
   .head-texts h1 {
-    font-size: 2.4em;
+    font-size: 2em;
     font-weight: 800;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
   }
   .head-texts h2 {
-    font-size: 1.6em;
+    font-size: 1.2em;
     font-weight: 600;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
+  }
+  .head-texts p {
+    font-size: 0.8em;
+    font-weight: 600;
+    margin-bottom: 16px;
   }
   .head-texts h3 {
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 600;
     margin-bottom: 32px;
   }
@@ -113,6 +118,9 @@ select:hover {
   }
   .head {
     height: 90vh;
+  }
+  h2 {
+    font-size: 1.4em;
   }
   .img-container {
     background: linear-gradient(
@@ -257,7 +265,8 @@ select:hover {
 
 @media (max-width: 768px) {
   .section2-card,
-  .simple-card-container {
+  .simple-card-container,
+  .simple-card {
     flex-direction: column;
   }
   .faq {

@@ -172,11 +172,16 @@ main {
 }
 
 .head {
-  background-image: url("/assets/taro/header.webp");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 100%;
+  background: linear-gradient(
+      to top,
+      black,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.8),
+      black
+    ),
+    url(../../assets/horoscope/bg-head.webp) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -203,7 +208,7 @@ main {
 }
 
 .head-sub h1 {
-  max-width: 550px;
+  max-width: 650px;
   font-size: 2.5em;
   width: 100%;
 }
@@ -220,10 +225,6 @@ main {
 }
 
 .second {
-  background-image: url("/assets/taro/planets.webp");
-  background-position: left bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
   width: 100%;
   min-height: 800px;
   margin-bottom: 60px;
@@ -273,6 +274,11 @@ main {
 }
 
 @media screen and (max-width: 768px) {
+  .head-sub h1 {
+    padding-top: 96px;
+    font-size: 2.5em;
+    width: 100%;
+  }
   .after-second-sub {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -281,6 +287,9 @@ main {
   }
   .second-head h3 {
     font-size: 1.8em;
+  }
+  .second-sub p {
+    width: 100%;
   }
 }
 @media screen and (max-width: 530px) {
@@ -431,4 +440,62 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.textarea {
+  margin: 96px;
+}
+.feedback-card {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 100%;
+  /* max-width: 700px; */
+  text-align: center;
+  margin: auto;
+}
+
+.feedback-card img {
+  /* width: 300px; */
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.feedback-card h3 {
+  color: #e0e0e0;
+  margin: 10px 0;
+  font-size: 1.5rem;
+}
+
+.feedback-card p {
+  color: #b3b3b3;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .head-sub h2 {
+    font-size: 1.5em;
+    width: 100%;
+  }
+  .feedback-card {
+    padding: 15px;
+  }
+  .textarea {
+    margin: 16px;
+  }
+  .feedback-card img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .feedback-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .feedback-card p {
+    font-size: 0.9rem;
+  }
 }
