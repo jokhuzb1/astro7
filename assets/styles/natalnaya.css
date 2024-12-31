@@ -98,13 +98,21 @@ select:hover {
     font-weight: 600;
     margin-bottom: 16px;
   }
-  .head-texts h3 {
+  .head-texts h4 {
     font-size: 1em;
     font-weight: 600;
     margin-bottom: 32px;
   }
   .head-texts {
     margin: auto;
+  }
+  .text-area-fist h4 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .doma {
+    padding: 10px;
+    margin: 10px;
   }
   .head {
     height: 90vh;
@@ -147,11 +155,10 @@ select:hover {
     margin-left: 8px;
   }
 }
-
-/* Section2styles */
-
-/* General Styles */
-
+.text-area-fist {
+  margin: 96px auto;
+  text-align: center;
+}
 .text-area {
   flex: 1;
   padding: 20px;
@@ -163,7 +170,7 @@ select:hover {
 }
 
 .text-area p {
-  font-size: 16px;
+  font-size: 1.4em;
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -284,87 +291,6 @@ select:hover {
   }
 }
 
-/* PLANS SECTION */
-.plans {
-  background: #0e0e0e;
-  width: 100%;
-  height: 100%;
-  padding: 48px 10px;
-
-  color: #ffff;
-  text-align: center;
-}
-.plan-card-container {
-  display: flex;
-  flex-wrap: no-wrap;
-  align-items: start;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-}
-.plan-card-red > h3,
-p,
-h1 {
-  color: #0e0e0e;
-}
-.plan-card-red > button {
-  background-color: #0e0e0e !important;
-  color: white !important;
-}
-.plan-card {
-  flex: 1;
-  min-width: 250px;
-  max-width: 300px;
-  background-color: black;
-  color: rgb(255, 254, 254) !important;
-  border: 1px solid white;
-  border-radius: 4px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.plan-card-red {
-  background-color: rgb(21, 163, 2);
-  border: none;
-  border-radius: 4px;
-}
-
-.plan-card h3 {
-  font-size: 1.2rem;
-  margin: 0 0 10px;
-}
-
-.plan-card h1 {
-  font-size: 1.5rem;
-  margin: 10px 0;
-}
-
-.plan-card p {
-  font-size: 1rem;
-  margin: 10px 0;
-}
-.plan-card > h3,
-h1,
-p {
-  color: white;
-}
-
-.plan-card button {
-  margin-top: 20px;
-  background-color: white;
-  color: black;
-  border: none;
-  padding: 10px 15px;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.plan-card button:hover {
-  background-color: #f0f0f0;
-}
 .faq {
   background-color: black;
   color: #ffff;
@@ -407,7 +333,31 @@ p {
   outline: none;
   transition: background-color 0.3s ease;
 }
+.doma {
+  background: linear-gradient(
+      to bottom,
+      black 0%,
+      black 10%,
+      rgba(0, 0, 0, 0.6) 60%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../../assets/natalnaya/123.webp") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed; /* Use background-attachment instead of background-position */
+  width: 100%;
+  height: 100%;
+  padding: 150px 120px 120px 150px;
+  margin: 96px 0;
+}
 
+.text-area ul {
+  text-align: start;
+  margin: 96px auto;
+  font-size: 36px;
+}
+.text-area ul > li {
+  margin: 24px auto;
+}
 .grid-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -418,15 +368,176 @@ p {
 }
 
 .grid-container img {
-  width: 180px;
-  height: 180px;
+  width: 240px;
+  height: 240px;
   padding: 16px;
   object-fit: cover;
+}
+.text-area {
+  text-align: center;
 }
 
 @media (max-width: 768px) {
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
+    padding: 16px;
+  }
+  .text-area {
+    margin: 8px 0;
+  }
+  .doma {
+    padding: 8px;
+  }
+  .grid-container img {
+    width: 180px;
+    height: 180px;
+    padding: 8px;
+    object-fit: cover;
+  }
+  .text-area ul {
+    text-align: start;
+    margin: 32px auto;
+    font-size: 24px;
+  }
+  .text-area ul > li {
+    margin: 8px auto;
+  }
+  .card img {
+    width: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}
+.card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 96px auto;
+}
+
+.card img {
+  width: 550px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-content {
+  flex: 1;
+  padding: 48px;
+}
+
+.card-content h2 {
+  margin: 0 0 8px;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.card-content h3 {
+  margin: 0 0 8px;
+  font-size: 1.8rem;
+  color: #555;
+}
+
+.card-content p {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .card-content {
+    flex: 1;
+    padding: 8px;
+  }
+  .card-content h2 {
+    margin: 0 0 8px;
+    font-size: 1.8rem;
+    color: #333;
+  }
+
+  .card-content h3 {
+    margin: 0 0 8px;
+    font-size: 1.3rem;
+    color: #555;
+  }
+
+  .card-content p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #666;
+  }
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+}
+.steps {
+  margin: 96px 0;
+}
+.container-content {
+  padding: 16px;
+  margin: 0 auto;
+  margin: 96px 0;
+}
+
+.steps-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding: 32px;
+}
+
+.step-card {
+  position: relative;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.step-card.steps-left .step-number {
+  width: 64px;
+  height: 64px;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.step-number {
+  border: 2px dashed white;
+  margin: 16px;
+}
+.step-card.steps-right .step-number {
+  width: 64px;
+  height: 64px;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .steps-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .step-card.steps-right .step-number {
+    right: auto;
   }
 }
