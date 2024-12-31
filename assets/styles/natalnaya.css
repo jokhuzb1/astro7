@@ -151,17 +151,6 @@ select:hover {
 /* Section2styles */
 
 /* General Styles */
-.section2-card {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 20px;
-}
 
 .text-area {
   flex: 1;
@@ -417,4 +406,27 @@ p {
   border: none;
   outline: none;
   transition: background-color 0.3s ease;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  place-content: center;
+  gap: 16px; /* Space between grid items */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.grid-container img {
+  width: 180px;
+  height: 180px;
+  padding: 16px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+  }
 }
