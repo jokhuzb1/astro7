@@ -1,4 +1,10 @@
 User-agent: *
-Disallow:
-
+Allow: /sovmestimost
+Allow: /matritsasudbi
+Allow: /taro
+Allow: /horoscope
+Allow: /natalnayakarta
+Disallow: /private
+Disallow: /tmp
+Disallow: /test
 Sitemap: https://promo.astro7.su/sitemap.xml
