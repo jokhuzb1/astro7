@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www.yourwebsite.com/sitemap.xml
+Sitemap: https://promo.astro7.su/sitemap.xml
