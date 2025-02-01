@@ -5,7 +5,7 @@ Sitemap: https://promo.astro7.su/sitemap.xml
 
 # Including all URLs explicitly
 Sitemap: https://promo.astro7.su/index.html
-Sitemap: https://promo.astro7.su/horoscrope.html
+Sitemap: https://promo.astro7.su/horoscope.html
 Sitemap: https://promo.astro7.su/matritsasudbi.html
 Sitemap: https://promo.astro7.su/natalnayakarta.html
 Sitemap: https://promo.astro7.su/sovmestimost.html

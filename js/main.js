@@ -1,7 +1,9 @@
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
-hamburger.addEventListener("click", mobileMenu);
+if (hamburger && navMenu) {
+  hamburger.addEventListener("click", mobileMenu);
+}
 
 function mobileMenu() {
   hamburger.classList.toggle("active");
@@ -11,8 +13,9 @@ function mobileMenu() {
 // when we click on hamburger icon its close
 
 const navLink = document.querySelectorAll(".nav-link");
-
-navLink.forEach((n) => n.addEventListener("click", closeMenu));
+if (hamburger && navMenu) {
+  navLink.forEach((n) => n.addEventListener("click", closeMenu));
+}
 
 function closeMenu() {
   hamburger.classList.remove("active");
@@ -24,14 +27,16 @@ window.onload = function () {
   const yearSelects = document.querySelectorAll(".year");
 
   // Days (1-31)
-  daySelects.forEach((daySelect) => {
-    for (let i = 1; i <= 31; i++) {
-      const option = document.createElement("option");
-      option.value = i;
-      option.text = i;
-      daySelect.appendChild(option);
-    }
-  });
+  if (daySelects) {
+    daySelects.forEach((daySelect) => {
+      for (let i = 1; i <= 31; i++) {
+        const option = document.createElement("option");
+        option.value = i;
+        option.text = i;
+        daySelect.appendChild(option);
+      }
+    });
+  }
 
   // Months in Russian (1-12)
   const months = [
@@ -48,23 +53,27 @@ window.onload = function () {
     "Ноябрь",
     "Декабрь",
   ];
-  monthSelects.forEach((monthSelect) => {
+  if (monthSelects) {
     months.forEach((month, index) => {
       const option = document.createElement("option");
       option.value = index + 1; // 1-12
       option.text = month;
-      monthSelect.appendChild(option);
+      monthSelects.forEach((monthSelect) => {
+        monthSelect.appendChild(option);
+      });
     });
-  });
+  }
 
   // Years (1950-2020)
-  for (let i = 1950; i <= 2020; i++) {
-    yearSelects.forEach((yearSelect) => {
-      const option = document.createElement("option");
-      option.value = i;
-      option.text = i;
-      yearSelect.appendChild(option);
-    });
+  if (yearSelects) {
+    for (let i = 1950; i <= 2020; i++) {
+      yearSelects.forEach((yearSelect) => {
+        const option = document.createElement("option");
+        option.value = i;
+        option.text = i;
+        yearSelect.appendChild(option);
+      });
+    }
   }
 };
 
@@ -125,58 +134,66 @@ const createReviewCard = (review) => {
 };
 
 // Loop through the reviews data and add each review to the container
-reviewsData.forEach((review) => {
-  const reviewCard = createReviewCard(review);
-  reviewsContainer.appendChild(reviewCard);
-});
+if (reviewsContainer) {
+  reviewsData.forEach((review) => {
+    const reviewCard = createReviewCard(review);
+    reviewsContainer.appendChild(reviewCard);
+  });
+}
 
 const accordionHeaders = document.querySelectorAll(".accordion-header");
 
 // Loop through each header and add a click event
-accordionHeaders.forEach((header) => {
-  header.addEventListener("click", () => {
-    const content = header.nextElementSibling; // Get the corresponding content div
-    const icon = header.querySelector(".accordion-icon");
-    // Toggle the display of the content
-    if (content.style.display === "block") {
-      content.style.display = "none";
-      icon.textContent = "+";
-    } else {
-      // Hide all other content sections
-      const allContents = document.querySelectorAll(".accordion-content");
-      allContents.forEach((item) => {
-        item.style.display = "none";
+if (accordionHeaders) {
+  accordionHeaders.forEach((header) => {
+    header.addEventListener("click", () => {
+      const content = header.nextElementSibling; // Get the corresponding content div
+      const icon = header.querySelector(".accordion-icon");
+      // Toggle the display of the content
+      if (content.style.display === "block") {
+        content.style.display = "none";
         icon.textContent = "+";
-      });
+      } else {
+        // Hide all other content sections
+        const allContents = document.querySelectorAll(".accordion-content");
+        allContents.forEach((item) => {
+          item.style.display = "none";
+          icon.textContent = "+";
+        });
 
-      // Show the clicked content
-      content.style.display = "block";
-      icon.textContent = "–";
-    }
+        // Show the clicked content
+        content.style.display = "block";
+        icon.textContent = "–";
+      }
+    });
   });
-});
+}
 // Get the button
 const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
 // Show the button when the user scrolls down
-window.onscroll = function () {
-  if (
-    document.body.scrollTop > 200 ||
-    document.documentElement.scrollTop > 200
-  ) {
-    scrollToTopBtn.style.display = "flex";
-  } else {
-    scrollToTopBtn.style.display = "none";
-  }
-};
+if (scrollToTopBtn) {
+  window.onscroll = function () {
+    if (
+      document.body.scrollTop > 200 ||
+      document.documentElement.scrollTop > 200
+    ) {
+      scrollToTopBtn.style.display = "flex";
+    } else {
+      scrollToTopBtn.style.display = "none";
+    }
+  };
+}
 
 // Scroll to the top when the button is clicked
-scrollToTopBtn.addEventListener("click", function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth", // Smooth scrolling
+if (scrollToTopBtn) {
+  scrollToTopBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Smooth scrolling
+    });
   });
-});
+}
 
 const fadeInElements = document.querySelectorAll(".fade-in");
 
@@ -203,16 +220,21 @@ const observer = new IntersectionObserver(
 ); // Trigger when 50% of the element is in the viewport
 
 // Observe all fade-in elements
-fadeInElements.forEach((element) => {
-  observer.observe(element);
-});
+if (fadeInElements) {
+  fadeInElements.forEach((element) => {
+    observer.observe(element);
+  });
+}
 window.addEventListener("load", () => {
   const spinner = document.getElementById("spinner");
   const content = document.getElementById("content");
 
   // Hide spinner
-  spinner.style.display = "none";
-
+  if (spinner) {
+    spinner.style.display = "none";
+  }
   // Show content
-  content.style.display = "block";
+  if (content) {
+    content.style.display = "block";
+  }
 });
