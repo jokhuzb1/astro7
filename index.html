@@ -99,6 +99,32 @@
     <link rel="manifest" href="/site.webmanifest" />
   </head>
   <body class="bg-black text-white" id="/">
+    <nav class="navbar">
+      <img src="assets/logo.png" alt="Astro7.su logo" />
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="/horoscope.html" class="nav-link">Гороскоп</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="/natalnayakarta.html" class="nav-link">Натальная Карта</a>
+        </li>
+        <li class="nav-item">
+          <a href="/sovmestimost.html" class="nav-link">Совместимость</a>
+        </li>
+        <li class="nav-item">
+          <a href="/taro.html" class="nav-link">Таро</a>
+        </li>
+        <li class="nav-item">
+          <a href="matritsasudbi.html" class="nav-link">Матрицa Судьбы </a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
     <div id="spinner" class="spinner-container">
       <span class="loader"></span>
     </div>
@@ -107,19 +133,207 @@
         <div
           style="
             width: 100%;
-            padding-top: 20vh;
-            padding-bottom: 20vh;
+            height: 100vh;
+            background: transparent;
             display: flex;
+            flex-direction: column;
+            gap: 20px;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
+            position: relative;
+            border-radius: 15px;
+            padding: 20px;
           "
         >
-          <a href="/horoscope.html" class="red-btn">Гороскоп 2025</a>
-          <a href="/matritsasudbi.html" class="red-btn">Матрицa судьбы</a>
-          <a href="/natalnayakarta.html" class="red-btn">Натальная карта</a>
-          <a href="/sovmestimost.html" class="red-btn">Совместимость</a>
-          <a href="/taro.html" class="red-btn">Таро</a>
+          <!-- Card -->
+          <div
+            style="
+              margin-top: 3rem;
+              width: 80%;
+              max-width: 550px;
+              background-color: rgba(
+                255,
+                255,
+                255,
+                0.8
+              ); /* Semi-transparent background */
+              padding: 20px;
+              border-radius: 10px;
+              text-align: center;
+              box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+              position: relative;
+              background-image: url('./assets/horoscope/bg-head.webp'); /* Background image */
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+            "
+          >
+            <a
+              href="/horoscope.html"
+              style="
+                display: inline-block;
+                padding: 15px 30px;
+                background-color: rgba(255, 0, 0, 1);
+                color: white;
+                text-align: center;
+                font-size: 18px;
+                border-radius: 5px;
+                text-decoration: none;
+                transition: background-color 0.3s, transform 0.3s;
+              "
+            >
+              Гороскоп 2025
+            </a>
+          </div>
+          <div
+            style="
+              width: 80%;
+              max-width: 550px;
+
+              padding: 20px;
+              border-radius: 10px;
+              text-align: center;
+              box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+              position: relative;
+              background-image: url('./assets/natalnaya/4.webp'); /* Background image */
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+            "
+          >
+            <a
+              href="/natalnayakarta.html"
+              style="
+                display: inline-block;
+                padding: 15px 30px;
+                background-color: rgba(255, 0, 0, 1);
+                color: white;
+                text-align: center;
+                font-size: 18px;
+                border-radius: 5px;
+                text-decoration: none;
+                transition: background-color 0.3s, transform 0.3s;
+              "
+            >
+              Натальная Карта
+            </a>
+          </div>
+          <div
+            style="
+              width: 80%;
+              max-width: 550px;
+              background-color: rgba(
+                255,
+                255,
+                255,
+                0.8
+              ); /* Semi-transparent background */
+              padding: 20px;
+              border-radius: 10px;
+              text-align: center;
+              box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+              position: relative;
+              background-image: url('./assets/astrology.webp'); /* Background image */
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+            "
+          >
+            <a
+              href="/sovmestimost.html"
+              style="
+                display: inline-block;
+                padding: 15px 30px;
+                background-color: rgba(255, 0, 0, 1);
+                color: white;
+                text-align: center;
+                font-size: 18px;
+                border-radius: 5px;
+                text-decoration: none;
+                transition: background-color 0.3s, transform 0.3s;
+              "
+            >
+              Совместимость
+            </a>
+          </div>
+          <div
+            style="
+              width: 80%;
+              max-width: 550px;
+              background-color: rgba(
+                255,
+                255,
+                255,
+                0.8
+              ); /* Semi-transparent background */
+              padding: 20px;
+              border-radius: 10px;
+              text-align: center;
+              box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+              position: relative;
+              background-image: url('./assets/taro/header.webp'); /* Background image */
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+            "
+          >
+            <!-- Button inside the card -->
+            <a
+              href="/taro.html"
+              style="
+                display: inline-block;
+                padding: 15px 30px;
+                background-color: rgba(255, 0, 0, 1);
+                color: white;
+                text-align: center;
+                font-size: 18px;
+                border-radius: 5px;
+                text-decoration: none;
+                transition: background-color 0.3s, transform 0.3s;
+              "
+            >
+              Таро
+            </a>
+          </div>
+          <div
+            style="
+              width: 80%;
+              max-width: 550px;
+              background-color: rgba(
+                255,
+                255,
+                255,
+                0.8
+              ); /* Semi-transparent background */
+              padding: 20px;
+              border-radius: 10px;
+              text-align: center;
+              box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+              position: relative;
+              background-image: url('./assets/matritsa/head.webp'); /* Background image */
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+            "
+          >
+            <!-- Button inside the card -->
+            <a
+              href="/matritsasudbi.html"
+              style="
+                display: inline-block;
+                padding: 15px 30px;
+                background-color: rgba(255, 0, 0, 1);
+                color: white;
+                text-align: center;
+                font-size: 18px;
+                border-radius: 5px;
+                text-decoration: none;
+                transition: background-color 0.3s, transform 0.3s;
+              "
+            >
+              Матрицa Судьбы
+            </a>
+          </div>
         </div>
       </section>
       <button id="scrollToTopBtn" class="scroll-to-top">↑</button>
